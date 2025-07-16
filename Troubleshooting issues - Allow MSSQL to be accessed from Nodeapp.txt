@@ -1,0 +1,58 @@
+🔹 Step 1:Open SQL Server Configuration Manager (search SQL Server in WIN + S)
+🔹 Step 2: Navigate to Services
+		Once Configuration Manager opens:
+
+		Expand SQL Server Services in the left pane.
+
+		In the right pane, look for:
+
+		✅ SQL Server (MSSQLSERVER) — this is the default instance.
+
+		✅ SQL Server Browser
+
+🔹 Step 3: Check the Status
+		Make sure Status = Running
+
+		If not, Right-click > Start the service
+
+		If "Start" is greyed out, check if:
+
+		The startup type is Disabled
+
+		Right-click → Properties
+
+		Set Start Mode = Automatic 
+
+		Apply → Then right-click and Start
+
+🔹 Step 4: Ensure TCP/IP is Enabled
+		In SQL Server Configuration Manager
+
+		Go to:
+
+		SQL Server Network Configuration > Protocols for MSSQLSERVER
+
+		Ensure TCP/IP is Enabled
+
+		If not, right-click → Enable
+
+		Restart SQL Server service after enabling it.
+
+🔹 Step 5: Check Port 1433
+		Still under Protocols for MSSQLSERVER
+
+		Double-click TCP/IP
+
+		Go to IP Addresses tab
+
+		Scroll to IPAll
+
+		Make sure:
+
+		TCP Port = 1433
+
+		TCP Dynamic Ports = (blank)
+
+		Apply changes → Restart SQL Server (MSSQLSERVER) service.
+
+🔹 Step 6: Retry Connection in Node.js

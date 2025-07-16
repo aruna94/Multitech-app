@@ -1,0 +1,10 @@
+Install Nodejs
+Install mssql and sql server studio
+Create server.js to connect to db
+Create Angular app for UI
+
+Git Initialise cmds
+
+git config --global user.name "Aruna" 
+git config --global user.email "arundras710@gmail.com"
+

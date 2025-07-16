@@ -1,0 +1,29 @@
+# Node (Backend)
+backend/node_modules/
+backend/dist/
+backend/logs/
+backend/*.log
+backend/coverage/
+
+# Angular (Frontend)
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/cache/
+frontend/.env
+
+# Common
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+.env.local
+.env.*.local
+
+# VS Code settings (optional)
+.vscode/
+
+# OS-specific
+.idea/
+*.bak
+*.old

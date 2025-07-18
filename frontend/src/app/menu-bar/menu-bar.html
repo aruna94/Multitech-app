@@ -1,0 +1,25 @@
+<div class="card">
+  <p-menubar>
+    <ng-template #start>
+      <img
+        width="135"
+        height="35"
+        src="http://mt.multitechchennai.com/wp-content/uploads/2019/05/logo.png"
+        alt="Multitech System"
+      />
+    </ng-template>
+    <ng-template #end>
+      <div class="flex items-center gap-2">
+        <p-avatar
+          icon="pi pi-user"
+          class="mr-2"
+          size="large"
+          shape="circle"
+          (click)="menu.toggle($event)"
+        />
+        <p-menu #menu [model]="items" [popup]="true" />
+        <!-- <p-button (click)="menu.toggle($event)" icon="pi pi-ellipsis-v" /> -->
+      </div>
+    </ng-template>
+  </p-menubar>
+</div>

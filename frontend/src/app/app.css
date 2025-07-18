@@ -1,0 +1,23 @@
+.grid-container {
+  min-height: 110vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 30px;
+}
+
+section,
+article {
+  width: 90vw;
+}
+
+.filter-section,
+.table-section {
+  justify-self: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #eff6ff;
+  padding: 20px;
+}

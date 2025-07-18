@@ -1,0 +1,43 @@
+<p-panel header="Search" [toggleable]="true">
+  <div class="card filter-flex justify-center">
+    <p-select
+      [options]="countries"
+      [(ngModel)]="selectedCountry"
+      optionLabel="name"
+      [filter]="true"
+      filterBy="name"
+      placeholder="Select a Country"
+      class="w-full md:w-56"
+    >
+      <ng-template #selectedItem let-selectedOption>
+        <div class="flex items-center gap-2">
+          <div>{{ selectedOption.name }}</div>
+        </div>
+      </ng-template>
+      <ng-template let-country #item>
+        <div class="flex items-center gap-2">
+          <div>{{ country.name }}</div>
+        </div>
+      </ng-template>
+    </p-select>
+    <p-select
+      [options]="cities"
+      [(ngModel)]="selectedCity"
+      optionLabel="name"
+      [showClear]="true"
+      placeholder="Select a City"
+      class="w-full md:w-56"
+    />
+    <p-floatlabel variant="on">
+      <p-datepicker
+        inputId="calendar-12h"
+        [(ngModel)]="datetime12h"
+        [showTime]="true"
+        [hourFormat]="'12'"
+      />
+      <label for="on_label">Select Date & Time</label>
+    </p-floatlabel>
+    <p-button label="Reset" />
+    <p-button label="Search" />
+  </div>
+</p-panel>
